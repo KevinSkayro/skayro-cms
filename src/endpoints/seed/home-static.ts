@@ -20,7 +20,7 @@ export const homeStatic: Page = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Payload Website Template',
+                text: "Hi, I'm Kevin",
                 version: 1,
               },
             ],
@@ -81,8 +81,9 @@ export const homeStatic: Page = {
     },
   },
   meta: {
-    description: 'An open-source website built with Payload and Next.js.',
-    title: 'Payload Website Template',
+    description:
+      'Hi I am Kevin Skayro, a software developer. I am passionate about building products that help people.',
+    title: "Hi, I'm Kevin",
   },
   title: 'Home',
 }
