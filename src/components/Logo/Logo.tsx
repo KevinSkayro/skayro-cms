@@ -1,6 +1,6 @@
-import clsx from 'clsx'
 import React from 'react'
 import Image from 'next/image'
+import { styles } from './Logo.styles'
 
 interface Props {
   className?: string
@@ -21,7 +21,7 @@ export const Logo = (props: Props) => {
       height={30}
       loading={loading}
       decoding="async"
-      className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
+      className={styles.logoImage(className)}
       src="/images/kevin-skayro-logo.png"
     />
   )
