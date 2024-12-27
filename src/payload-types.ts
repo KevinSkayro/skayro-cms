@@ -85,7 +85,7 @@ export interface Page {
   id: string;
   title: string;
   hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
+    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact' | 'TextTransition';
     richText?: {
       root: {
         type: string;
@@ -118,6 +118,27 @@ export interface Page {
         }[]
       | null;
     media?: (string | null) | Media;
+    textTransitionItems?:
+        | {
+            richText?: {
+                root: {
+                type: string;
+                children: {
+                    type: string;
+                    version: number;
+                    [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+                };
+                [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            }[]
+        | null;
+    textTransitionDelay?: ('1000' | '2000' | '3000' | '4000' | '5000' | '6000' | '7000' | '8000' | '9000' | '10000') | null;
   };
   layout: (CallToActionBlock | ContentBlock | MediaBlock | ArchiveBlock | FormBlock)[];
   meta?: {
