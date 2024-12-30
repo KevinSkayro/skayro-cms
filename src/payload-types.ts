@@ -319,6 +319,19 @@ export interface ContentBlock {
   blockName?: string | null;
   blockType: 'content';
 }
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "YoutubeBlock".
+ */
+export interface YoutubeBlock {
+    videoUrl: string | null;
+    className?: string | null;
+    id?: string | null;
+    blockName?: string | null;
+    blockType: 'youtube';
+    }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaBlock".
