@@ -39,8 +39,9 @@ export const Media: CollectionConfig = {
     },
   ],
   upload: {
-    // Upload to the public/media directory in Next.js making them publicly accessible even outside of Payload
-    staticDir: path.resolve(dirname, '../../public/media'),
+    // storage adapter: vercelBlob, //https://payloadcms.com/docs/upload/storage-adapters#vercel-blob-installation
+    // By default files upload to the public/media directory in Next.js making them publicly accessible even outside of Payload but in this case, we want to store them in a third-party storage service.
+    disableLocalStorage: true,
     adminThumbnail: 'thumbnail',
     imageSizes: [
       {
