@@ -43,7 +43,7 @@ export default buildConfig({
         {
           rel: 'icon',
           type: 'image/png',
-          url: '/images/kevin-skayro-icon1.png',
+          url: '/images/kevin-skayro-icon.png',
         },
       ],
     },
