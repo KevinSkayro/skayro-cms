@@ -26,3 +26,14 @@ export const Logo = (props: Props) => {
     />
   )
 }
+
+export const Icon = () => {
+  return(
+    <Image
+      alt='Kevin Skayro Icon'
+      width={50}
+      height={50}
+      src="/images/kevin-skayro-icon1.png"
+    />
+  )
+}

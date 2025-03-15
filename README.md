@@ -57,6 +57,19 @@ git clone -n --depth=1 --filter=tree:0 https://github.com/payloadcms/payload my-
 
 That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
 
+### Error: Missing Import in Payload CMS
+
+When running the application, you might encounter the following error:
+```bash
+getFromImportMap: PayloadComponent not found in importMap {key: "@payloadcms/storage-vercel-blob/client#VercelBlobClientUploadHandler"PayloadComponent: "@payloadcms/storage-vercel-blob/client#VercelBlobClientUploadHandler"schemaPath: "@payloadcms/storage-vercel-blob/client#VercelBlobClientUploadHandler"} "You may need to run the `payload generate:importmap` command to generate the importMap ahead of runtime."
+```
+
+Run the following command to generate the import map:
+
+```
+yarn payload generate:importmap
+```
+
 ## How it works
 
 The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
